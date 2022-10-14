@@ -1,18 +1,4 @@
 <?php
-require_once "bootstrap.php";
-$url = $_SERVER['REQUEST_URI'];
-
-use Repository\PageRepository;
-
-if (isset($_GET['id'])) {
-    $pageId = $_GET['id'];
-} else {
-    $pageId = 1;
-}
-$pageRepo = new PageRepository($entityManager);
-$currentPage = $pageRepo->getById($pageId);
-$pages = $pageRepo->getAll();
-
 require_once("fragments/headFragment.php");
 ?>
 <!-- NAVIGATION -->
@@ -25,7 +11,7 @@ require_once("fragments/headFragment.php");
                 foreach ($pages as $page) {
                     print("<li class=\"nav-item\">" .
                         "<a class=\"nav-link active text-light\"
-                         aria-current=\"page\" href=?id=" . $page->getId() . ">" .
+                         aria-current=\"page\" href=\"" . $base_url . "/Pages/?id=" . $page->getId() . "\">" .
                         $page->getTitle() . "</a></li>");
                 }
                 ?>
@@ -34,7 +20,7 @@ require_once("fragments/headFragment.php");
     </div>
     <span style="width: 40%;" class="fs-2 me-2">Content Managment System</span>
 </nav>
-<div class="container-min-height container text-center">
+<div class="container-min-height container">
     <h1><?php echo $currentPage->getTitle(); ?></h1>
     <div><?php echo $currentPage->getContent(); ?></div>
     <?php

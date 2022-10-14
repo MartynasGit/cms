@@ -1,21 +1,26 @@
 <?php
-$url = $_SERVER['REQUEST_URI'];
+$base_url = 'http://localhost/cms';
+
+$source = $_SERVER['REQUEST_URI'];
+
+if (isset($_SERVER['REDIRECT_URL']))
+    $source = $_SERVER['REDIRECT_URL'];
+
+$url = substr($source, -1, 1) === '/' ? $source : $source . '/';
+
 $prefix = '/cms';
 switch ($url) {
-    case $prefix . '/' . (empty($_SERVER['QUERY_STRING']) ? '' : '?' . $_SERVER['QUERY_STRING']):
-        require __DIR__ . '/src/views/pages.php';
+    case $prefix . '/':
+        require __DIR__ . '/src/controlers/pageControler.php';
         break;
-    case $prefix . '' . (empty($_SERVER['QUERY_STRING']) ? '' : '?' . $_SERVER['QUERY_STRING']):
-        require __DIR__ . '/src/views/pages.php';
+    case $prefix . '/Pages/':
+        require __DIR__ . '/src/controlers/pageControler.php';
         break;
-    case $prefix . '/Pages' . (empty($_SERVER['QUERY_STRING']) ? '' : '?' . $_SERVER['QUERY_STRING']):
-        require __DIR__ . '/src/views/pages.php';
+    case $prefix . '/Admin/':
+        require __DIR__ . '/src/controlers/adminControler.php';
         break;
-    case $prefix . '/Content' . (empty($_SERVER['QUERY_STRING']) ? '' : '?' . $_SERVER['QUERY_STRING']):
-        require __DIR__ . '/src/views/content.php';
-        break;
-    case $prefix . '/Admin' . (empty($_SERVER['QUERY_STRING']) ? '' : '?' . $_SERVER['QUERY_STRING']):
-        require __DIR__ . '/src/views/admin.php';
+    case $prefix . '/Admin/View/':
+        require __DIR__ . '/src/controlers/adminViewControler.php';
         break;
     default:
         http_response_code(404);
