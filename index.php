@@ -1,26 +1,33 @@
 <?php
 $base_url = 'http://localhost/cms';
-
+$prefix = '/cms';
 $source = $_SERVER['REQUEST_URI'];
-
 if (isset($_SERVER['REDIRECT_URL']))
     $source = $_SERVER['REDIRECT_URL'];
+$case;
 
 $url = substr($source, -1, 1) === '/' ? $source : $source . '/';
 
-$prefix = '/cms';
 switch ($url) {
     case $prefix . '/':
+        $case = "main";
         require __DIR__ . '/src/controlers/pageControler.php';
         break;
     case $prefix . '/Pages/':
+        $case = "main";
         require __DIR__ . '/src/controlers/pageControler.php';
         break;
     case $prefix . '/Admin/':
+        $case = "admin";
         require __DIR__ . '/src/controlers/adminControler.php';
         break;
     case $prefix . '/Admin/View/':
+        $case = "adminView";
         require __DIR__ . '/src/controlers/adminViewControler.php';
+        break;
+    case $prefix . '/Admin/Edit/':
+        $case = "adminEdit";
+        require __DIR__ . '/src/controlers/editPageControler.php';
         break;
     default:
         http_response_code(404);

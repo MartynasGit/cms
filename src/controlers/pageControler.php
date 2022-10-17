@@ -9,6 +9,7 @@ if (isset($_GET['id'])) {
 } else {
     $pageId = 1;
 }
+
 $pageRepo = new PageRepository($entityManager);
 $currentPage = $pageRepo->getById($pageId);
 $pages = $pageRepo->getAll();

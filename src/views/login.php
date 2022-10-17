@@ -26,5 +26,6 @@
         </div>
         <button type="submit" class="btn btn-primary mt-3" name="login">Submit</button>
     </form>
+</div>
 
     <?php require_once("fragments/footerFragment.php") ?>

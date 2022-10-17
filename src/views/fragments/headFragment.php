@@ -14,5 +14,4 @@
     <title>CMS</title>
     <link href="<?= $base_url; ?>/src/views/styles/styles.css" rel="stylesheet">
 </head>
-
-<body class="text-center">
+<body>
