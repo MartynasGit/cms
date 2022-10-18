@@ -36,11 +36,9 @@ For app to run we need PHP interpreter(XAMPP), MySQL Workbench.
 - Select "Import from Self-Contained File" and select "dump.sql" file from cloned repository folder.
 - Press "Start Import"
 - To open page go browser and type localhost/(directory here) example: http://localhost/cms/
-- To open admin http://localhost/cms/Admin 
+- To open admin: example http://localhost/cms/Admin 
 - Ussername: Admin
 - Password: Admin
-
-IMPORTANT !  If your page directory is not as my example change "base_url" and "prefix" to match your folder route accordingly.
 
 ## Demo
 ![ScreenShot](/src/views/assets/customer.png)

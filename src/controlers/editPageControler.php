@@ -1,8 +1,8 @@
 <?php
 
+require_once "bootstrap.php";
 use Repository\PageRepository;
 
-require_once "bootstrap.php";
 
 if (isset($_GET['editPage'])) {
     $pageId = $_GET['editPage'];

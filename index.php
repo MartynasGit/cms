@@ -1,7 +1,9 @@
 <?php
-session_start();
-$base_url = "http://localhost/cms"; //Change url and prefix if your folder name or directory is diffrent.
-$prefix = '/cms';                   // Match also this to folders directory from htdocs folder.
+
+$extractedPrefix = explode("/", $_SERVER['REQUEST_URI']);
+$prefix = '/' . $extractedPrefix[1];
+$base_url = "http://localhost" . $prefix;
+
 $source = $_SERVER['REQUEST_URI'];
 if (isset($_SERVER['REDIRECT_URL']))
     $source = $_SERVER['REDIRECT_URL'];

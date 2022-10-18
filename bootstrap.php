@@ -3,6 +3,7 @@
 use Doctrine\ORM\ORMSetup;
 use Doctrine\ORM\EntityManager;
 
+session_start();
 require_once "vendor/autoload.php";
 
 // Create a simple "default" Doctrine ORM configuration for Annotations
@@ -16,7 +17,7 @@ $config = ORMSetup::createAnnotationMetadataConfiguration(array(__DIR__ . "/src/
 $conn = array(
     'driver'   => 'pdo_mysql',
     'host'     => '127.0.0.1',
-    'dbname'   => 'cms2',
+    'dbname'   => 'cms',
     'user'     => 'root',
     'password' => ''
 );
