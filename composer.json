@@ -1,11 +1,10 @@
 {
-    "name": "martynas/blog-cms",
+    "name": "martynas/cms",
     "description": "Project for assigment",
     "type": "project",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Martynas\\BlogCms\\": "src/",
             "Models\\": "src/models",
             "Repository\\": "src/repositories"
         }

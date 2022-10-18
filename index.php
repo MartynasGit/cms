@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$base_url = "http://localhost/cms";
+$base_url = "http://localhost/cms"; //Change this if your folder name or directory is diffrent
 $prefix = '/cms';
 $source = $_SERVER['REQUEST_URI'];
 if (isset($_SERVER['REDIRECT_URL']))

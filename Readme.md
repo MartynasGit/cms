@@ -40,9 +40,11 @@ For app to run we need PHP interpreter(XAMPP), MySQL Workbench.
 - Ussername: Admin
 - Password: Admin
 
-## Demo
+- IMPORTANT !  If your page directory is not as my example change "base_url" to match your folder rpute accordingly.
 
+## Demo
 ![ScreenShot](/src/views/assets/customer.png)
+### Admin page
 ![ScreenShot](/src/views/assets/adminDemo.png)
 
 ## Author

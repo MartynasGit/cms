@@ -46,7 +46,6 @@ class ComposerStaticInit3fe59596ae1e0c38165c1e81d6d38dee
         'M' => 
         array (
             'Models\\' => 7,
-            'Martynas\\BlogCms\\' => 17,
         ),
         'D' => 
         array (
@@ -132,10 +131,6 @@ class ComposerStaticInit3fe59596ae1e0c38165c1e81d6d38dee
         'Models\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/models',
-        ),
-        'Martynas\\BlogCms\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
         ),
         'Doctrine\\Persistence\\' => 
         array (
