@@ -2,7 +2,7 @@
 require_once("fragments/headFragment.php");
 require_once("fragments/adminHeader.php");
 ?>
-<div class="container">
+<div class="container text-center">
     <h1>Manage Pages</h1>
     <table class="table table-hover">
         <thead>

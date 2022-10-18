@@ -16,7 +16,7 @@ $config = ORMSetup::createAnnotationMetadataConfiguration(array(__DIR__ . "/src"
 $conn = array(
     'driver'   => 'pdo_mysql',
     'host'     => '127.0.0.1',
-    'dbname'   => 'myblog',
+    'dbname'   => 'cms',
     'user'     => 'root',
     'password' => ''
 );

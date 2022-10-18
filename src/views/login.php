@@ -5,7 +5,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active text-light" aria-current="page" href="<?= $base_url; ?>">Home</a>
+                    <a class="nav-link active text-light" aria-current="page" href="<?php echo $base_url?>">Home</a>
                 </li>
             </ul>
         </div>

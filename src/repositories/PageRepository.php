@@ -3,7 +3,6 @@
 
 use Doctrine\ORM\Mapping as ORM;
 use Models\Page;
-
 class PageRepository
 {
     protected $entityManager;
@@ -18,9 +17,5 @@ class PageRepository
     public function getById($id)
     {
         return $this->entityManager->find('Models\Page', $id);
-    }
-    public function create(){
-        $page = new Page();
-        
     }
 }

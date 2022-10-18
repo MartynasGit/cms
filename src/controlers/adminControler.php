@@ -1,8 +1,16 @@
 <?php
+
+require "bootstrap.php";
 use Models\Page;
 use Repository\PageRepository;
-session_start();
-require_once "bootstrap.php";
+
+$pageRep = new PageRepository($entityManager);
+$pages = $pageRep->getAll();
+
+if (isset($_GET['editPage'])) {
+    $pageId = $_GET['editPage'];
+    $currentPage = $pageRep->getById($pageId);
+}
 
 // Helper functions
 function redirect_to_root()
@@ -26,16 +34,22 @@ if (isset($_POST['login'])) {
         $loginErrorMessage = 'Wrong username or password';
     }
 }
+// UPDATE LOGIC
+if (isset($_POST['edit'])) {
+    $page = $pageRep->getById($pageId);
+    $page->setTitle($_POST['titleName']);
+    $page->setContent($_POST['content']);
+    $entityManager->flush();
+    $successfulMessage = "Updated succsesfully!";
+}
 // DELETE LOGIC
 if (isset($_GET['deletePage'])) {
-    $page = $entityManager->find('Models\Page', $_GET['deletePage']);
+    $page = $pageRep->getById($_GET['deletePage']);
     $entityManager->remove($page);
     $entityManager->flush();
     redirect_to_root();
 }
 
-$pageRepo = new PageRepository($entityManager);
-$pages = $pageRepo->getAll();
 // CREATE NEW PAGE
 if (isset($_POST['createPage'])) {
     $page = new Page();
@@ -44,12 +58,19 @@ if (isset($_POST['createPage'])) {
     $entityManager->persist($page);
     $entityManager->flush();
     redirect_to_root();
-}  // TODO CATCH ERROR
-
-
+}
 
 if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == "login") {
-    require_once "src/views/admin.php";
+    switch ($case) {
+        case "admin":
+            require_once "src/views/admin.php";
+            break;
+        case "adminView":
+            require_once "src/views/adminView.php";
+            break;
+        case "adminEdit":
+            require_once "src/views/editPage.php";
+    }
 } else {
     require_once "src/views/login.php";
 }
