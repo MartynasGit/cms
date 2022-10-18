@@ -5,14 +5,14 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active text-light" aria-current="page" href="<?php echo $base_url?>">Home</a>
+                    <a class="nav-link active text-light" aria-current="page" href="<?php echo $base_url ?>">Home</a>
                 </li>
             </ul>
         </div>
     </div>
     <span style="width: 40%;" class="fs-2 me-2">Content Managment System</span>
 </nav>
-<div class="mt-5 mx-auto col-3 ps-3 ">
+<div class="mt-5 mx-auto col-3 ps-3 login-min-height">
     <h1 class="fw-bold mb-4">Welcome Admin</h1>
     <form method="POST" action="">
         <span class="text-danger"><?php print($loginErrorMessage) ?></span>
@@ -28,4 +28,4 @@
     </form>
 </div>
 
-    <?php require_once("fragments/footerFragment.php") ?>
+<?php require_once("fragments/footerFragment.php") ?>

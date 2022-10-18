@@ -1,5 +1,6 @@
 <?php
-require "bootstrap.php";
+require_once "bootstrap.php";
+
 use Repository\PageRepository;
 
 if (isset($_GET['id'])) {

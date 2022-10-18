@@ -1,8 +1,7 @@
 <?php
- namespace Repository;
 
-use Doctrine\ORM\Mapping as ORM;
-use Models\Page;
+namespace Repository;
+
 class PageRepository
 {
     protected $entityManager;

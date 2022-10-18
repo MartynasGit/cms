@@ -20,9 +20,10 @@ require_once("fragments/headFragment.php");
     </div>
     <span style="width: 40%;" class="fs-2 me-2">Content Managment System</span>
 </nav>
-<div class="container-min-height container text-center">
+<div class="view-min-height container text-center mt-3">
     <h1><?php echo $currentPage->getTitle(); ?></h1>
     <div><?php echo $currentPage->getContent(); ?></div>
-    <?php
-    require_once("fragments/footerFragment.php")
-    ?>
+</div>
+<?php
+require_once("fragments/footerFragment.php")
+?>

@@ -2,7 +2,7 @@
 require_once("fragments/headFragment.php");
 require_once("fragments/adminHeader.php");
 ?>
-<div class="container">
+<div class="container view-min-height">
     <h1 class="m-3 text-center">Edit Page </h1>
     <div class="mt-5 mx-auto col-5 ps-3 ">
         <form method="POST" action="">
@@ -16,7 +16,7 @@ require_once("fragments/adminHeader.php");
                 <label for="floatingTextarea2">Content</label>
             </div>
             <button type="submit" class="btn btn-primary mt-3" name="edit">Submit</button>
-            <a class="btn btn-primary mt-3" href="<?= $base_url . "/Admin/"?>">Abort</a>
+            <a class="btn btn-primary mt-3" href="<?= $base_url . "/Admin/" ?>">Abort</a>
 
         </form>
     </div>

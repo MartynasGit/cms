@@ -1,4 +1,7 @@
 <?php
 require_once "bootstrap.php";
 
-return \Doctrine\ORM\Tools\Console\ConsoleRunner::createHelperSet($entityManager);
+use Doctrine\ORM\Tools\Console\ConsoleRunner;
+use Doctrine\ORM\Tools\Console\EntityManagerProvider\SingleManagerProvider;
+
+ConsoleRunner::run( new SingleManagerProvider($entityManager),$commands );

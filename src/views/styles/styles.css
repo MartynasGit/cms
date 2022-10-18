@@ -1,19 +1,28 @@
 * {
   font-family: "Lato", sans-serif;
   font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
 }
 a {
   text-decoration: none;
 }
 .container-min-height {
   position: relative;
-  min-height: calc(100vh - 48px);
+  min-height: calc(100vh - 88px);
+}
+.login-min-height {
+  position: relative;
+  min-height: calc(100vh - 135px);
+}
+.view-min-height {
+  position: relative;
+  min-height: calc(100vh - 104px);
 }
 .content-wrap {
   padding-bottom: 2.5rem;
 }
 footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   height: 40px;

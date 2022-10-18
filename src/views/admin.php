@@ -2,7 +2,7 @@
 require_once("fragments/headFragment.php");
 require_once("fragments/adminHeader.php");
 ?>
-<div class="container text-center">
+<div class="container text-center container-min-height">
     <h1>Manage Pages</h1>
     <table class="table table-hover">
         <thead>
@@ -24,7 +24,6 @@ require_once("fragments/adminHeader.php");
                     }
                     echo '<a href="' . $base_url . '/Admin/?deletePage=' . $page->getId() . '" class="btn btn-primary">' . '<i class="bi bi-trash3-fill me-1"></i></i></a></tr>';
                 }
-                
             } else {
                 echo '<h2>0 results</h2>';
             }
@@ -33,7 +32,7 @@ require_once("fragments/adminHeader.php");
     </table>
     <!-- CREATE NEW PAGE -->
     <?php echo $error ?? ""; ?>
-    <div class="col-2 mt-3">
+    <div class="col-2 my-3">
         <form action="" method="post">
             <div class="form-group">
                 <label for="name">Create new page</label>

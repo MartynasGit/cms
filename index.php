@@ -16,16 +16,16 @@ switch ($url) {
         require __DIR__ . '/src/controlers/pageControler.php';
         break;
     case $prefix . '/Admin/':
-        $case = "admin";
+        require __DIR__ . '/src/controlers/adminControler.php';
+        break;
+    case $prefix . '/admin/':
         require __DIR__ . '/src/controlers/adminControler.php';
         break;
     case $prefix . '/Admin/View/':
-        $case = "adminView";
-        require __DIR__ . '/src/controlers/adminControler.php';
+        require __DIR__ . '/src/controlers/adminViewControler.php';
         break;
     case $prefix . '/Admin/Edit/':
-        $case = "adminEdit";
-        require __DIR__ . '/src/controlers/adminControler.php';
+        require __DIR__ . '/src/controlers/editPageControler.php';
         break;
     default:
         http_response_code(404);

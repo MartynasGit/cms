@@ -13,7 +13,10 @@ require_once("fragments/headFragment.php");
     </div>
     <span style="width: 40%;" class="fs-2 me-2">Content Managment System</span>
 </nav>
-<h1>404 ERORRR</h1>
+<div class="container-min-height container text-center pt-5">
+    <span class="fw-bold d-block text-danger"> PAGE NOT FOUND </span>
+    <img alt="404 error message" src="<?= $base_url; ?>/src/views/assets/404.webp" width="800px">
+</div>
 <?php
 require_once("fragments/footerFragment.php")
 ?>
