@@ -31,7 +31,7 @@ For app to run we need PHP interpreter(XAMPP), MySQL Workbench.
 - Clone repository inside "htdocs" folder.
 - git clone https://github.com/MartynasGit/cms.git
 - Open cloned folder and run git bash. Type "php ../composer.phar install".
-- Open "MySQL Workbench". Create connection with ussername: "root", wtih no password. (if you wish to have one add here and change in file called bootstrap.php)
+- Open "MySQL Workbench". Create connection with ussername: "root" and empty password. (if you wish to have one add here and change in file called bootstrap.php)
 - Open connection. Then open "Administration" tab and click "Data Import/Restore".
 - Select "Import from Self-Contained File" and select "dump.sql" file from cloned repository folder.
 - Press "Start Import"
@@ -39,6 +39,8 @@ For app to run we need PHP interpreter(XAMPP), MySQL Workbench.
 - To open admin: example http://localhost/cms/Admin 
 - Ussername: Admin
 - Password: Admin
+
+IMPORTANT !! If your page directory is not like in my example, change "prefix" in index.php to match your folder route accordingly.
 
 ## Demo
 ![ScreenShot](/src/views/assets/customer.png)

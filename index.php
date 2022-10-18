@@ -1,7 +1,6 @@
 <?php
 
-$extractedPrefix = explode("/", $_SERVER['REQUEST_URI']);
-$prefix = '/' . $extractedPrefix[1];
+$prefix = '/cms'; //Change if folders directory is not matching from htdocs folder.
 $base_url = "http://localhost" . $prefix;
 
 $source = $_SERVER['REQUEST_URI'];
