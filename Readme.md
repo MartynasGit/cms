@@ -38,7 +38,7 @@ For app to run we need PHP interpreter(XAMPP), MySQL Workbench.
 - Password: Admin
 
 **IMPORTANT !!**
-**Change _configExample.ini_ file name to _config.ini_**
+**Change _config.ini.example_ file name to _config.ini_**
 
 Also if your cloned aplication directory is not like in my example, change "app_prefix" on "config.ini" file to match your folder route accordingly.
 
