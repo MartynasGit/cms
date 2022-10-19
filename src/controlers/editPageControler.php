@@ -17,10 +17,7 @@ if (isset($_GET['editPage'])) {
 }
 
 if (isset($_POST['edit'])) {
-    $page = $pageRep->getById($pageId);
-    $page->setTitle($_POST['titleName']);
-    $page->setContent($_POST['content']);
-    $entityManager->flush();
+    $pageRep->editPage($pageId, $_POST['titleName'], $_POST['content']);
     $successfulMessage = "Updated succsesfully!";
 }
 if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == "login") {

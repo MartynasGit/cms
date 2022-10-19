@@ -30,19 +30,13 @@ if (isset($_POST['login'])) {
 }
 // DELETE LOGIC
 if (isset($_GET['deletePage'])) {
-    $page = $pageRep->getById($_GET['deletePage']);
-    $entityManager->remove($page);
-    $entityManager->flush();
+    $pageRep->deletePage($_GET['deletePage']);
     redirect_to_root();
 }
 
 // CREATE NEW PAGE
 if (isset($_POST['createPage'])) {
-    $page = new Page();
-    $page->setTitle($_POST['createPage']);
-    $page->setContent(" ");
-    $entityManager->persist($page);
-    $entityManager->flush();
+    $pageRep->createPage($_POST['createpage']);
     redirect_to_root();
 }
 

@@ -6,8 +6,8 @@ require_once "vendor/autoload.php";
 use Doctrine\ORM\ORMSetup;
 use Doctrine\ORM\EntityManager;
 
-// Create a simple "default" Doctrine ORM configuration for Annotations
 $ini = parse_ini_file('config.ini');
+// Create a simple "default" Doctrine ORM configuration for Annotations
 $isDevMode = true;
 $proxyDir = null;
 $cache = null;
