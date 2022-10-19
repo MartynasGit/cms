@@ -1,12 +1,13 @@
 <?php
+session_start();
+require_once "vendor/autoload.php";
+
 
 use Doctrine\ORM\ORMSetup;
 use Doctrine\ORM\EntityManager;
 
-session_start();
-require_once "vendor/autoload.php";
-
 // Create a simple "default" Doctrine ORM configuration for Annotations
+$ini = parse_ini_file('config.ini');
 $isDevMode = true;
 $proxyDir = null;
 $cache = null;
@@ -15,11 +16,11 @@ $config = ORMSetup::createAnnotationMetadataConfiguration(array(__DIR__ . "/src/
 
 // database configuration parameters
 $conn = array(
-    'driver'   => 'pdo_mysql',
-    'host'     => '127.0.0.1',
-    'dbname'   => 'cms',
-    'user'     => 'root',
-    'password' => ''
+    'driver'   => $ini['db_driver'],
+    'host'     => $ini['db_host'],
+    'dbname'   => $ini['db_name'],
+    'user'     => $ini['db_user'],
+    'password' => $ini['db_password']
 );
 
 // obtaining the entity manager

@@ -1,7 +1,8 @@
 <?php
+require_once "bootstrap.php";
 
-$prefix = '/cms'; //Change if folders directory is not matching from htdocs folder.
-$base_url = "http://localhost" . $prefix;
+$prefix = $ini['app_prefix'];
+$base_url = $ini['app_base_url'] . $prefix;
 
 $source = $_SERVER['REQUEST_URI'];
 if (isset($_SERVER['REDIRECT_URL']))

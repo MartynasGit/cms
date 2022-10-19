@@ -1,0 +1,10 @@
+[database]
+db_driver   = "pdo_mysql"
+db_host     = "127.0.0.1"
+db_name     = "cms"
+db_user     = "root"
+db_password = ""
+
+[application]
+app_prefix   = "/cms"
+app_base_url = "http://localhost"

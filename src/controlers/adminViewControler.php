@@ -1,5 +1,5 @@
 <?php
-require_once "bootstrap.php";
+
 use Repository\PageRepository;
 
 $pageRep = new PageRepository($entityManager);
