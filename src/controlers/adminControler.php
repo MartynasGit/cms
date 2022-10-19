@@ -36,7 +36,7 @@ if (isset($_GET['deletePage'])) {
 
 // CREATE NEW PAGE
 if (isset($_POST['createPage'])) {
-    $pageRep->createPage($_POST['createpage']);
+    $pageRep->createPage($_POST['createPage']);
     redirect_to_root();
 }
 
