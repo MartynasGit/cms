@@ -29,7 +29,7 @@ CREATE TABLE `pages` (
   `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `content` longtext COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `pages` (
 
 LOCK TABLES `pages` WRITE;
 /*!40000 ALTER TABLE `pages` DISABLE KEYS */;
-INSERT INTO `pages` VALUES (1,'Home','<p> This is home page content </p>\r\n<img src=\"https://static01.nyt.com/images/2021/01/17/arts/17biden-arts-illo-web/17biden-arts-illo-web-mediumSquareAt3X.jpg\" width=\"500px\" alt=\"Art\">'),(3,'About',' <p> This is about page </p>\r\n<br><br><br>\r\n <p> Write something intresting</p>'),(4,'Contacts','<p>All your contacts here</p>\r\n\r\n<p>Number</p>\r\n<p>Email</p>\r\n<p>Address</p>');
+INSERT INTO `pages` VALUES (1,'Home','<p> This is home page content </p>\r\n<img src=\"https://static01.nyt.com/images/2021/01/17/arts/17biden-arts-illo-web/17biden-arts-illo-web-mediumSquareAt3X.jpg\" width=\"500px\" alt=\"Art\">'),(2,'About',' <p> This is about page </p>\r\n<br><br><br>\r\n <p> Write something intresting</p>'),(3,'Contacts','<p>All your contacts here</p>\r\n\r\n<p>Number</p>\r\n<p>Email</p>\r\n<p>Address</p>');
 /*!40000 ALTER TABLE `pages` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
